@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Model Train Hobbyist - The Signal Post</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Blog Specific Styles */
+        .blog-hero-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .blog-hero-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card-img {
+            height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .article-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Dark mode overrides applied via style.css generally, but ensuring here */
+    </style>
+</head>
+
+<body class="bg-light-custom">
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid ps-3 pe-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-train-freight-front me-2"></i>Model Train Hobbyist
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Navigation Links (Centered) -->
+                <ul class="navbar-nav mx-auto align-items-center" style="white-space: nowrap;">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galary.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Right Side Actions (Buttons & Theme Toggle) -->
+                <div class="d-flex align-items-center mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-custom btn-sm me-2 text-nowrap">Login</a>
+                    <a href="register.html" class="btn btn-primary-custom btn-sm text-nowrap">Sign Up</a>
+                    <button id="theme-toggle" class="theme-switch ms-3" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="hero-title">The Signal Post</h1>
+            <p class="hero-subtitle">News, reviews, and stories from the rails.</p>
+        </div>
+    </header>
+
+    <!-- Section 1: Featured Story (Immersive Overlay) -->
+    <section class="section-padding pb-5">
+        <div class="container">
+            <div class="card border-0 rounded-4 overflow-hidden text-white shadow-lg position-relative"
+                style="min-height: 500px;">
+                <img src="assets/images/blog_dcc_tech.png"
+                    class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                    style="filter: brightness(0.4);" alt="DCC Electronics">
+                <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-lg-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="badge bg-secondary me-2">Tech Deep Dive</span>
+                        <span class="text-white-50 small"><i class="bi bi-clock me-1"></i> 10 min read</span>
+                    </div>
+                    <h1 class="display-4 fw-bold mb-3">The Digital Revolution: Mastering DCC Control</h1>
+                    <p class="lead mb-4 text-white-50" style="max-width: 700px;">Forget the wiring nightmares of the
+                        past. We explore the latest "plug-and-play" decoders that are transforming how we run our
+                        railroads.</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://ui-avatars.com/api/?name=James+Smith&background=random"
+                            class="rounded-circle me-3 border border-2 border-white" width="50" alt="Author">
+                        <div>
+                            <p class="mb-0 fw-bold">James Smith</p>
+                            <p class="mb-0 small text-white-50">Lead Technician</p>
+                        </div>
+                        <a href="blog-details.html?id=1" class="btn btn-light rounded-pill px-4 ms-auto fw-bold">Read
+                            Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Latest Reviews (Horizontal Wide Cards) -->
+    <section class="section-padding pt-0">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h6 class="text-secondary-custom fw-bold text-uppercase">Fresh From The Bench</h6>
+                    <h2 class="mb-0">Latest Model Reviews</h2>
+                </div>
+                <!-- Filter Tags -->
+                <div class="d-none d-md-flex gap-2">
+                    <button class="btn btn-sm btn-outline-dark rounded-pill active">All</button>
+                    <button class="btn btn-sm btn-outline-dark rounded-pill">Locos</button>
+                    <button class="btn btn-sm btn-outline-dark rounded-pill">Scenery</button>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Wide Card 1 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-sm-5">
+                                <img src="assets/images/gallery_masterpiece.png"
+                                    class="img-fluid h-100 w-100 object-fit-cover" style="min-height: 200px;"
+                                    alt="Trackwork">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <div class="mb-2"><span class="badge bg-light text-dark border">Layout Design</span>
+                                    </div>
+                                    <h4 class="card-title fw-bold mb-2"><a href="blog-details.html?id=2"
+                                            class="text-decoration-none text-dark">Hand-Laid Track: Worth The Pain?</a>
+                                    </h4>
+                                    <p class="card-text text-muted small mb-3">Commercial flex track vs. hand-spiked
+                                        rails. We compare the results.</p>
+                                    <div
+                                        class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Oct 24, 2025</small>
+                                        <a href="blog-details.html?id=2"
+                                            class="text-primary fw-bold text-decoration-none small">Read
+                                            Review</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wide Card 2 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-sm-5">
+                                <img src="assets/images/train_steam_engine.png"
+                                    class="img-fluid h-100 w-100 object-fit-cover" style="min-height: 200px;"
+                                    alt="Steam Engine">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <div class="mb-2"><span class="badge bg-light text-dark border">Locomotive</span>
+                                    </div>
+                                    <h4 class="card-title fw-bold mb-2"><a href="blog-details.html?id=3"
+                                            class="text-decoration-none text-dark">The A4 Pacific: Legend Reborn</a>
+                                    </h4>
+                                    <p class="card-text text-muted small mb-3">Die-cast metal, synchronized smoke, and
+                                        pure power. A comprehensive look.</p>
+                                    <div
+                                        class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Oct 20, 2025</small>
+                                        <a href="blog-details.html?id=3"
+                                            class="text-primary fw-bold text-decoration-none small">Read
+                                            Review</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wide Card 3 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-sm-5">
+                                <img src="assets/images/train_freight_yard.png"
+                                    class="img-fluid h-100 w-100 object-fit-cover" style="min-height: 200px;"
+                                    alt="Freight Yard">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <div class="mb-2"><span class="badge bg-light text-dark border">Technique</span>
+                                    </div>
+                                    <h4 class="card-title fw-bold mb-2"><a href="blog-details.html?id=4"
+                                            class="text-decoration-none text-dark">Weathering: The Rust Guide</a></h4>
+                                    <p class="card-text text-muted small mb-3">Don't ruin your expensive models. Start
+                                        with these safe powder techniques.</p>
+                                    <div
+                                        class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Oct 15, 2025</small>
+                                        <a href="blog-details.html?id=4"
+                                            class="text-primary fw-bold text-decoration-none small">Read
+                                            Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wide Card 4 (New) -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-sm-5">
+                                <img src="assets/images/train_forest_route.png"
+                                    class="img-fluid h-100 w-100 object-fit-cover" style="min-height: 200px;"
+                                    alt="Forest Scenery">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <div class="mb-2"><span class="badge bg-light text-dark border">Scenery</span></div>
+                                    <h4 class="card-title fw-bold mb-2"><a href="blog-details.html?id=5"
+                                            class="text-decoration-none text-dark">Modeling Realistic Trees</a></h4>
+                                    <p class="card-text text-muted small mb-3">From wire armatures to static grass
+                                        foliage, create a forest that breathes.</p>
+                                    <div
+                                        class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Oct 10, 2025</small>
+                                        <a href="blog-details.html?id=5"
+                                            class="text-primary fw-bold text-decoration-none small">Read
+                                            Tutorial</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Tutorial Spotlight (Inverse Card) -->
+    <section class="section-padding bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0 pe-lg-5">
+                    <span class="badge bg-warning text-dark mb-3">Project Diary</span>
+                    <h2 class="mb-4 text-white">Restoring a Vintage Brass Locomotive</h2>
+                    <p class="text-white-50 mb-4">Follow along as we take a tarnished 1960s barn find and bring it back
+                        to exhibition quality. This week: stripping the old lacquer and re-soldering the handrails.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-light rounded-pill px-4">Part 1</a>
+                        <a href="#" class="btn btn-outline-light rounded-pill px-4">Part 2</a>
+                        <a href="#" class="btn btn-outline-light rounded-pill px-4">Part 3</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <img src="assets/images/gallery_restoration.png"
+                        class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 400px;"
+                        alt="Restoration Bench">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Community Voices (Features) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary-custom fw-bold text-uppercase">Community</h6>
+                <h2 class="mb-0">Member Spotlights</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <img src="assets/images/blog_contributor_spotlight.png"
+                                    class="img-fluid h-100 w-100 object-fit-cover" style="min-height: 250px;"
+                                    alt="Artie">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center p-4">
+                                    <h5 class="fw-bold mb-2">Artie "The Brush"</h5>
+                                    <p class="card-text text-muted small mb-3">"Patience isn't just a virtue, it's the
+                                        only tool you can't buy."</p>
+                                    <a href="#" class="btn btn-sm btn-outline-dark rounded-pill align-self-start">Read
+                                        Interview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <img src="assets/images/gallery_community.png"
+                                    class="img-fluid h-100 w-100 object-fit-cover" style="min-height: 250px;"
+                                    alt="Photographer">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body d-flex flex-column h-100 justify-content-center p-4">
+                                    <h5 class="fw-bold mb-2">Photo Contest Winner</h5>
+                                    <p class="card-text text-muted small mb-3">Meet the photographer behind this month's
+                                        stunning cover shot.</p>
+                                    <a href="#" class="btn btn-sm btn-outline-dark rounded-pill align-self-start">See
+                                        Photos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Newsletter -->
+    <section class="section-padding bg-primary text-white text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <i class="bi bi-envelope-open-heart display-1 mb-4 text-secondary-custom"></i>
+                    <h2 class="fw-bold mb-3">Never Miss a signal</h2>
+                    <p class="lead text-white-50 mb-4">Get the latest reviews, tutorials, and community stories
+                        delivered straight to your inbox.</p>
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-6">
+                            <input type="email" class="form-control form-control-lg rounded-pill border-0"
+                                placeholder="Enter your email address">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit"
+                                class="btn btn-secondary-custom btn-lg rounded-pill px-5">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="index.html" class="footer-logo">
+                        <i class="bi bi-train-front me-2"></i>Model Train Hobbyist
+                    </a>
+                    <p class="text-white-50">Join the ultimate community for model train enthusiasts. Share your
+                        layouts, learn from experts, and connect with hobbyists worldwide.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="guides.html">Guides</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Newsletter</h5>
+                    <p class="text-white-50 small">Subscribe to get the latest news and updates.</p>
+                    <form action="#" class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary-custom" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Model Train Hobbyist. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

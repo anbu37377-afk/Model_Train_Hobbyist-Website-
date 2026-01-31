@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Train Hobbyist - Service Details</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .feature-icon-box {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.5rem;
+        }
+
+        .service-meta-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .service-meta-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(var(--bs-primary-rgb), 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid ps-3 pe-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-train-freight-front me-2"></i>Model Train Hobbyist
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Navigation Links (Centered) -->
+                <ul class="navbar-nav mx-auto align-items-center" style="white-space: nowrap;">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galary.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Right Side Actions (Buttons & Theme Toggle) -->
+                <div class="d-flex align-items-center mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-custom btn-sm me-2 text-nowrap">Login</a>
+                    <a href="register.html" class="btn btn-primary-custom btn-sm text-nowrap">Sign Up</a>
+                    <button id="theme-toggle" class="theme-switch ms-3" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <!-- Header -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="hero-title">Custom Layout Design</h1>
+            <p class="hero-subtitle">We turn your dream into a buildable plan.</p>
+        </div>
+    </header>
+
+    <!-- Details Content -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Sidebar (Left Column - 4 cols) -->
+                <!-- Moved to Left based on standard patterns, or Right? 
+                     User previously asked sidebar on left. I will keep it on LEFT as per last state. -->
+                <div class="col-lg-4 order-2 order-lg-1">
+                    <div class="d-flex flex-column gap-4">
+
+                        <!-- Widget 1: Service Snapshot (New!) -->
+                        <div class="card card-custom border-0 shadow-sm p-4">
+                            <h4 class="mb-4">Service Overview</h4>
+                            <div class="service-meta-item">
+                                <div class="bg-light-custom p-2 rounded-circle me-3 text-primary">
+                                    <i class="bi bi-tag-fill fs-5"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">Starting Price</small>
+                                    <span class="fw-bold fs-5">$199.00</span>
+                                </div>
+                            </div>
+                            <div class="service-meta-item">
+                                <div class="bg-light-custom p-2 rounded-circle me-3 text-primary">
+                                    <i class="bi bi-clock-fill fs-5"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">Turnaround Time</small>
+                                    <span class="fw-bold fs-5">2-4 Weeks</span>
+                                </div>
+                            </div>
+                            <div class="service-meta-item">
+                                <div class="bg-light-custom p-2 rounded-circle me-3 text-primary">
+                                    <i class="bi bi-star-fill fs-5"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">Client Rating</small>
+                                    <span class="fw-bold fs-5">4.9/5.0</span>
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <a href="contact.html" class="btn btn-primary-custom w-100">Request Consultation</a>
+                        </div>
+
+                        <!-- Widget 2: Testimonial -->
+                        <div class="card card-custom border-0 shadow-sm overflow-hidden">
+                            <div class="card-body p-4">
+                                <h5 class="mb-3 fw-bold">Happy Client</h5>
+                                <p class="text-muted fst-italic mb-3">"The 3D wiring diagram saved me dozens of hours.
+                                    Worth every penny!"</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3"
+                                        style="width: 40px; height: 40px;">TR</div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Tom R.</h6>
+                                        <small class="text-muted">August 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Flush Image at bottom -->
+                            <img src="assets/images/custom_layout_process.png" alt="Project Result"
+                                class="w-100 object-fit-cover" style="height: 160px; display: block;">
+                        </div>
+
+                        <!-- Widget 3: Contact Support -->
+                        <div class="card bg-dark text-white p-3 text-center border-0 shadow-sm">
+                            <h4 class="mb-2 text-white">Have Questions?</h4>
+                            <p class="text-white mb-3 text-white small">Not sure which package is right for you? Talk to
+                                our design team.</p>
+                            <a href="contact.html" class="btn btn-outline-light w-100 btn-sm">Contact Support</a>
+                        </div>
+
+                        <!-- Widget 4: Sidebar Image -->
+                        <div class="card card-custom border-0 shadow-sm overflow-hidden">
+                            <img src="assets/images/train_mountain_pass.png" alt="Sidebar Decor"
+                                class="w-100 h-100 object-fit-cover" style="min-height: 250px;">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main Content (Right Column - 8 cols) -->
+                <div class="col-lg-8 order-1 order-lg-2">
+                    <div class="d-flex flex-column gap-4">
+
+                        <!-- Main Description Card -->
+                        <div class="card card-custom border-0 shadow-sm overflow-hidden">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1541447271487-09612b3f49f7?auto=format&fit=crop&q=80&w=800"
+                                    alt="Layout Design" class="w-100 object-fit-cover responsive-img-height">
+                                <div class="position-absolute bottom-0 start-0 w-100 bg-gradient-to-t p-4"
+                                    style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);">
+                                    <span class="badge bg-primary mb-2">Service Details</span>
+                                    <h2 class="text-white m-0">Comprehensive Planning</h2>
+                                </div>
+                            </div>
+                            <div class="card-body p-4 p-md-5">
+                                <p class="lead text-muted mb-4"> Designing a model railroad is complex. You have to
+                                    consider minimum radii, turnout angles, grades, and aisle width, all while trying to
+                                    fit in the industries and scenery you want.</p>
+                                <p class="text-muted mb-5">Our expert designers use advanced CAD software to create
+                                    track plans that are operationally interesting and construction-ready.</p>
+
+                                <h4 class="mb-4 fw-bold">What You Get:</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">
+                                            <i class="bi bi-compass-fill text-secondary-custom fs-4 me-3"></i>
+                                            <span class="fw-medium">Full 2D Track Plan in your scale</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">
+                                            <i class="bi bi-box-fill text-secondary-custom fs-4 me-3"></i>
+                                            <span class="fw-medium">3D Visualization of the terrain</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">
+                                            <i class="bi bi-lightning-charge-fill text-secondary-custom fs-4 me-3"></i>
+                                            <span class="fw-medium">Wiring Diagram for blocks/DCC</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center bg-light rounded-3 p-3 h-100">
+                                            <i class="bi bi-list-check text-secondary-custom fs-4 me-3"></i>
+                                            <span class="fw-medium">Bill of Materials for track/lumber</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Card -->
+                        <div class="card card-custom border-0 shadow-sm p-4 p-md-5">
+                            <h3 class="mb-4 fw-bold">Frequently Asked Questions</h3>
+                            <div class="accordion accordion-flush" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button fw-semibold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                            How long does the design process take?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body text-muted">
+                                            Typically 2-4 weeks depending on the size and complexity of the layout.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-semibold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                            Can you work with any scale?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body text-muted">
+                                            Yes! We specialize in HO, N, O, and Z scales, but can work with G scale as
+                                            well.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-semibold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                            What software do you use?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body text-muted">
+                                            We use 3rd PlanIt and AnyRail for precision planning.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="index.html" class="footer-logo">
+                        <i class="bi bi-train-front me-2"></i>Model Train Hobbyist
+                    </a>
+                    <p class="text-white-50">Join the ultimate community for model train enthusiasts. Share your
+                        layouts, learn from experts, and connect with hobbyists worldwide.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 footer-links">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="guides.html">Guides</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Newsletter</h5>
+                    <p class="text-white-50 small">Subscribe to get the latest news and updates.</p>
+                    <form action="#" class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary-custom" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Model Train Hobbyist. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
