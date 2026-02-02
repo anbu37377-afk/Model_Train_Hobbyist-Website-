@@ -85,8 +85,32 @@ h6 {
 [data-theme="dark"] h3,
 [data-theme="dark"] h4,
 [data-theme="dark"] h5,
-[data-theme="dark"] h6 {
-    color: #ffffff;
+[data-theme="dark"] h6,
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary h4,
+.bg-secondary h5,
+.bg-secondary h6 {
+    color: #ffffff !important;
 }
 
 a {
@@ -131,6 +155,20 @@ a {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(232, 93, 4, 0.3);
     color: #fff;
+}
+
+.btn-secondary-custom {
+    background-color: #ffffff;
+    color: #1c2b35;
+    border: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-secondary-custom:hover {
+    background-color: #e85d04;
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 .btn-outline-custom {
@@ -307,6 +345,19 @@ a {
     transition: var(--transition);
     overflow: hidden;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-custom .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-custom .btn {
+    margin-top: auto;
+    align-self: center;
 }
 
 [data-theme="dark"] .card-custom {
@@ -353,7 +404,7 @@ a {
 
 .footer-logo {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 20px;
     display: block;
@@ -650,33 +701,52 @@ a {
     white-space: nowrap;
 }
 
-/* Desktop Navigation Alignment based on User Request */
+/* Desktop Navigation Alignment based on User Request - Fixed for 1024px issue */
 @media (min-width: 992px) {
     .navbar {
         position: relative;
-        /* Ensure positioning context */
     }
 
     .navbar-collapse {
-        position: static;
-        /* Let the nav escape strict flex flow for centering if needed, though usually container is the anchor */
+        display: flex !important;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .navbar-nav {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        /* Ensure it sits on top of other elements if overlap occurs, but usually we want to avoid overlap */
-        z-index: 10;
+        /* Removed absolute positioning to prevent overlap at 1024px */
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
     }
 
     /* Ensure the right-side buttons stay to the right */
-    /* converting the button container to auto margin left is handled by Flexbox structure if we use ms-auto, 
-       but since nav is absolute, the collapse only contains the buttons now in standard flow (effectively) */
-    .collapse.navbar-collapse>div {
-        margin-left: auto;
+    .navbar-collapse>div:last-child {
+        margin-left: 0;
     }
 }
+
+/* Specific fix for 992px to 1200px (Medium Desktops like 1024px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbar-brand {
+        font-size: 1.15rem;
+        margin-right: 10px;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        margin: 0 2px !important;
+    }
+
+    .btn-sm {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
 
 /* Ensure buttons cluster nicely on mobile */
 @media (max-width: 991px) {
