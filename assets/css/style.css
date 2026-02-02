@@ -537,9 +537,9 @@ a {
     .hero-home {
         height: auto !important;
         min-height: auto !important;
-        padding-top: 100px;
-        /* Ensure content clears navbar */
-        padding-bottom: 50px;
+        padding-top: 80px;
+        /* Balanced for mobile */
+        padding-bottom: 30px;
         display: block;
         /* Remove flex centering constraint on mobile */
     }
