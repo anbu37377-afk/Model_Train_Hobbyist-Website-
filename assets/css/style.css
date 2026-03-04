@@ -433,7 +433,7 @@ a {
     color: #fff;
 }
 
-.footer-links h5 {
+.footer h5 {
     color: #fff;
     margin-bottom: 20px;
     font-size: 1.1rem;
@@ -710,6 +710,23 @@ a {
     height: 400px;
     width: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .card-img-overlay {
+        padding: 1.25rem !important;
+    }
+
+    .card-img-overlay h1.display-4,
+    .card-img-overlay .display-4 {
+        font-size: 1.85rem !important;
+        line-height: 1.2;
+    }
+
+    .card-img-overlay .lead {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
 }
 
 @media (max-width: 768px) {
