@@ -506,6 +506,12 @@ a {
     transform: translateY(-5px);
 }
 
+/* Auth Pages Link Hover */
+.auth-container a:not(.btn):not(.navbar-brand):hover {
+    color: var(--secondary) !important;
+    text-decoration: underline !important;
+}
+
 /* Utilities */
 .text-primary-custom {
     color: var(--primary);
